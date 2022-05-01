@@ -1,0 +1,23 @@
+.page {
+    &__great {
+        margin-bottom: 98px;
+    }
+    &__partner {
+        margin-bottom: 98px;
+    }
+    &__result {
+    }
+}
+
+@media (max-width: 767px) {
+    .page {
+        &__great {
+            margin-bottom: 49px;
+        }
+        &__partner {
+            margin-bottom: 49px;
+        }
+        &__result {
+        }
+    }
+}

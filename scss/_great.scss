@@ -1,0 +1,78 @@
+.great {
+    &__row {
+        margin-left: 12px;
+        display: flex;
+        // flex-box (flex-container)
+    }
+
+    &__image {
+        // flex-element
+        flex: 0 0 285px; // Аналог width (Ширину из макета)
+        // flex: 1 0 285px; // Аналог min-width
+        // flex: 0 1 285px; // Аналог max-width
+        img {
+            max-width: 100%;
+            // width: 100%;
+            // height: 100%;
+            // object-fit: cover;
+        }
+    }
+
+    &__body {
+        // flex-element
+        flex: 1 1 auto; // Заполнить всю оставшуюся ширину
+        // Отступы внутренние сверху, справа, слева (снизу не задаём)
+        padding: 48px 36px 0 130px;
+    }
+
+    &__subject {
+        margin-bottom: 10px;
+    }
+
+    &__subheading {
+        margin-bottom: 2px;
+    }
+}
+
+// 1920 +
+// 1600 +
+// 1440
+// 1336 +
+// =====
+// 1024
+// 768
+// =====
+// 425
+// 375
+// 320
+
+// 900 ->
+
+// Стили будут работать при ширине от 0 до 900 вкл пикселей
+@media (max-width: 900px) {
+    .great {
+        &__row {
+            margin-left: 0;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+        }
+
+        &__body {
+            padding: 0;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        &__text {
+            text-align: justify;
+        }
+    }
+}
+
+@media (max-width: 374px) {
+    .great {
+        &__image {
+            flex: 0 0 250px;
+        }
+    }
+}
